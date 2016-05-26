@@ -119,7 +119,7 @@ module.exports = function(selector, context) {
   nodes.addClass = function(name) {
     return nodes.forEach(function(node) {
       if (node.className.indexOf(name) > -1) return
-      node.className += ' ' + name
+      node.className = node.className.trim() + ' ' + name
     })
   }
   nodes.removeClass = function(name) {
