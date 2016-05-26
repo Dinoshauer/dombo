@@ -125,7 +125,7 @@ module.exports = function(selector, context) {
   nodes.removeClass = function(name) {
     return nodes.forEach(function(node) {
       if (node.className.indexOf(name) === -1) return
-      node.className = node.className.split(name).join(' ')
+      node.className = node.className.split(name).join('')
     })
   }
   nodes.toggleClass = function(name, state) {
